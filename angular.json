@@ -29,6 +29,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/Sharmila-Angular-Portfolio/",
               "budgets": [
                 {
                   "type": "initial",
