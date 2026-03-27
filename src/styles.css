@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+:root {
+  --base-color: #0A192F;       /* Deep navy background */
+  --accent-color: #FF5722;     /* Orange */
+  --highlight-color: #FFFFFF;  /* White */
+  --secondary-text: #B0B0B0;   /* Light Grey */
+}
+html, body {
+  background-color: var(--base-color);
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* Makes clicking "About" slide down nicely */
+}
+/* Global */
+body {
+  background-color: var(--base-color);
+  color: var(--highlight-color);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar with glass effect */
+nav {
+  background: rgba(10, 25, 47, 0.7); /* semi-transparent base */
+  backdrop-filter: blur(8px);        /* glass blur */
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+nav a {
+  color: var(--highlight-color);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  color: var(--accent-color);
+}
+

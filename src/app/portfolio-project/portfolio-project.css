@@ -1,0 +1,85 @@
+/* --- SHARED STYLES --- */
+.projects-section { padding: 80px 10%; }
+.category-header { margin-bottom: 50px; }
+.label { color: #ff5722; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; font-weight: 700; }
+.category-title { font-size: 2.5rem; margin-top: 10px; color: #ccd6f6; }
+.category-title span { color: #ff5722; }
+.separator { border: 0; border-top: 1px solid rgba(255, 255, 255, 0.08); margin: 100px 0; }
+
+/* --- PROFESSIONAL GRID (Formerly Lab Layout) --- */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background: #112240;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 87, 34, 0.1);
+  transition: 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff5722;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.main-icon { font-size: 2rem; color: #ff5722; }
+.secure-tag { color: #27c93f; font-size: 0.8rem; font-weight: 600; }
+.card-name { color: #e6edf3; font-size: 1.4rem; margin-bottom: 8px; }
+.role-subtitle { color: #ff5722; font-size: 0.85rem; margin-bottom: 15px; opacity: 0.8; }
+.card-description { color: #8892b0; line-height: 1.6; font-size: 0.95rem; margin-bottom: 20px; }
+
+/* --- LAB DETAILED (Formerly Professional Layout) --- */
+.detailed-container { display: flex; flex-direction: column; gap: 100px; }
+.detailed-card { display: flex; align-items: center; gap: 60px; }
+.detailed-card.reverse { flex-direction: row-reverse; }
+.detailed-info { flex: 1; }
+.detailed-title { font-size: 2rem; color: #ccd6f6; margin-bottom: 20px; }
+.detailed-text { color: #8892b0; line-height: 1.7; margin-bottom: 25px; }
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff5722;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #ff5722;
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.github-btn:hover { background: rgba(255, 87, 34, 0.1); transform: scale(1.05); }
+
+/* --- TERMINAL STYLING --- */
+.detailed-visual { 
+    flex: 1.2;
+    width: 50%; }
+.terminal-window {
+  background: #0d1117;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+  overflow: hidden;
+  box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 87, 34, 0.1);
+}
+.terminal-bar { background: #161b22; padding: 10px 15px; display: flex; justify-content: space-between; border-bottom: 1px solid #30363d; }
+.btns { display: flex; gap: 6px; }
+.btns span { width: 10px; height: 10px; border-radius: 50%; }
+.r { background: #ff5f56; } .y { background: #ffbd2e; } .g { background: #27c93f; }
+.filename { color: #8b949e; font-size: 0.8rem; font-family: monospace; }
+pre { padding: 25px; margin: 0; color: #a5d6ff; font-family: 'Fira Code', monospace; font-size: 0.9rem; overflow-x: auto; }
+
+/* --- TAGS --- */
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;}
+.tag { font-size: 0.7rem; color: #ff5722; background: rgba(255, 87, 34, 0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(255, 87, 34, 0.2); }
+
+@media (max-width: 900px) {
+  .detailed-card, .detailed-card.reverse { flex-direction: column; text-align: center; }
+  .grid-layout { grid-template-columns: 1fr; }
+}

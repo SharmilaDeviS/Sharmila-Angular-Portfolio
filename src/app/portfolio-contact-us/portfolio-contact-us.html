@@ -1,0 +1,97 @@
+<section class="contact-section">
+  <div class="contact-header">
+    <span class="label">Get In Touch</span>
+    <h2 class="category-title">{{ dynamicGreeting() }}<span>.</span></h2>
+  </div>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <p class="contact-text">
+        I'm currently open to new opportunities and collaborations. Whether you have a project in mind or just want to say hi, I’ll get back to you as soon as possible!
+      </p>
+
+      <div class="info-item">
+        <i class="bi bi-geo-alt"></i>
+        <div>
+          <h4>Location</h4>
+          <p>Chennai, Tamil Nadu</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <i class="bi bi-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <p>shallusingaraj@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <button (click)="openWhatsApp()" class="whatsapp-btn">
+          <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <div class="contact-form-wrapper">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="modern-form">
+        
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" placeholder="Name" required>
+          <mat-icon matSuffix>person</mat-icon>
+          @if(contactForm.get('name')?.hasError('required') ) {
+            <mat-error><span >Name is required</span></mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email Address</mat-label>
+          <input matInput type="email" formControlName="email" placeholder="email@example.com">
+          <mat-icon matSuffix>alternate_email</mat-icon>
+          @if(contactForm.get('email')?.hasError('required') ) {
+            <mat-error><span >Email is required</span></mat-error>
+          }
+          @if(contactForm.get('email')?.hasError('email')) {
+            <mat-error><span>Please enter a valid email address</span></mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Mobile Number</mat-label>
+          <span matPrefix class="orange-prefix"> &nbsp; +91 &nbsp;</span>
+          <input matInput type="tel" maxlength="10" formControlName="mobile" placeholder="Mobile Number">
+          <mat-icon matSuffix>smartphone</mat-icon>
+          @if(contactForm.get('mobile')?.hasError('required') ) {
+            <mat-error><span >Mobile number is required</span></mat-error>
+          }
+          @if(contactForm.get('mobile')?.hasError('pattern')) {
+            <mat-error><span>Enter exactly 10 digits</span></mat-error>
+          }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Your Message</mat-label>
+          <textarea matInput formControlName="message" rows="4" placeholder="Give Your Ideas Here..."></textarea>
+          <mat-icon matSuffix>chat_bubble_outline</mat-icon>
+          @if(contactForm.get('message')?.hasError('required') ) {
+            <mat-error><span >Message is required</span></mat-error>
+          }
+          @if(contactForm.get('message')?.hasError('minlength')) {
+            <mat-error><span>Message must be at least 10 characters long</span></mat-error>
+          }
+        </mat-form-field>
+
+        <button type="submit" [disabled]="contactForm.invalid || isLoading()" class="submit-btn">
+          @if(!isLoading()) {
+            <span>Send Message <i class="bi bi-send"></i></span>
+          }
+          @else {
+            <mat-spinner [diameter]="24"></mat-spinner>
+          }
+        </button>
+
+      </form>
+    </div>
+  </div>
+</section>
