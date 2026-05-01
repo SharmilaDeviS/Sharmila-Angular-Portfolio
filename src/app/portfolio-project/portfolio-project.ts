@@ -96,7 +96,7 @@ export class PortfolioProject {
     tags: ['Angular 21', 'CSS Grid', 'Animation'],
     terminalFile: 'portfolio.css',
     terminalCode: `.hero-shadow { \n  filter: drop-shadow(0 0 20px orange); \n}`,
-    githubUrl: 'https://github.com/SharmilaDeviS/Sharmila-Angular-Portfolio' // Add your link here
+    githubUrl: 'https://github.com' // Add your link here
   },
   {
     name: 'Little Artists',
@@ -106,7 +106,7 @@ export class PortfolioProject {
     terminalCode: `const filterValue = name.toLowerCase();
 
     return this.options.filter(option => option.name.toLowerCase().indexOf(filterValue) === 0);`,
-    githubUrl: 'https://github.com/SharmilaDeviS/little-artist' // Add your link here
+    githubUrl: 'https://github.com' // Add your link here
   },
   {
     name: 'Samila tutorials',
@@ -117,7 +117,7 @@ export class PortfolioProject {
       let national3 = 50;
       let amount3 = national3*hours*dayorweek;
       this.totalamnt = "Suggested market rate: RM "+national3+"/hour. "+dayorweek+"day x "+hours+"hour/week. RM "+amount3+"/month";`,
-    githubUrl: 'https://github.com/SharmilaDeviS/samila' // Add your link here
+    githubUrl: 'https://github.com' // Add your link here
   },
   {
     name: 'Velan Architecture',
@@ -137,7 +137,7 @@ export class PortfolioProject {
           },
           err => console.error('Error sending email', err)
         );`,
-    githubUrl: 'https://github.com/SharmilaDeviS/Velan-interiors'
+    githubUrl: 'https://github.com'
   }
 ];
 
